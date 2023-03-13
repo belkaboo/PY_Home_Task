@@ -7,3 +7,11 @@
 # 3 2 4 -> yes
 # 3 2 1 -> no
 
+n = int(input('Кол-во долек в длину - ')) 
+m = int(input('Кол-во долек в ширину - '))
+k = int(input('Сколько нужно отломить - '))
+
+if (k % n == 0 or k % m == 0) and k < m * n:
+    print('Yes')
+else:
+    print('No')

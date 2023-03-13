@@ -10,7 +10,7 @@
 ticket_number = input("Введите номер билета: ")
 check = ticket_number.isdecimal()
 
-while (ticket_number.__len__() != 6 or check != True ):
+while (ticket_number.__len__() != 6 or check != True):
     print('!! Не корректный номер билета, попробуй снова')
     ticket_number = input("Введите номер билета: ")
     check = ticket_number.isdecimal()
