@@ -6,3 +6,13 @@
 
 # 385916 -> yes
 # 123456 -> no
+
+ticket_number = input("Введите номер билета: ")
+
+first_part = int(ticket_number[0]) + int(ticket_number[1]) + int(ticket_number[2])
+second_part = int(ticket_number[3]) + int(ticket_number[4]) + int(ticket_number[5])
+
+if first_part == second_part:
+    print('Yes (Счастливый)')
+else:
+    print('No (Не счастливый)')
