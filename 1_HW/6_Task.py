@@ -8,17 +8,14 @@
 # 123456 -> no
 
 ticket_number = input("Введите номер билета: ")
+check = ticket_number.isdecimal()
 
-while (ticket_number.__len__() != 6 ):
+while (ticket_number.__len__() != 6 or check != True ):
     print('!! Не корректный номер билета, попробуй снова')
     ticket_number = input("Введите номер билета: ")
+    check = ticket_number.isdecimal()
     
 first_part = int(ticket_number[0]) + int(ticket_number[1]) + int(ticket_number[2])
 second_part = int(ticket_number[3]) + int(ticket_number[4]) + int(ticket_number[5])
-
-# # if first_part == second_part:
-#         print('Yes (Счастливый)')
-# else:
-#         print('No (Не счастливый)')
 
 print(f'Билет счастливый? (True/False) - {first_part == second_part}')
