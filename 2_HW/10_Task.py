@@ -2,3 +2,23 @@
 # Определите минимальное число монеток, которые нужно перевернуть, чтобы все монетки были повернуты вверх одной и той же стороной. 
 # Выведите минимальное количество монет, которые нужно перевернуть
 
+from random import randint
+
+n = int(input('Кол - во монет: '))
+coins_list = []
+a = b = 0
+for i in range(n):
+    coins_list.append(randint(0,1))
+    if coins_list[i] == 0:
+        a += 1
+    else:
+        b += 1
+        
+print(coins_list)
+
+if a < b:
+    print(a)
+else:
+    print(b)
+
+
