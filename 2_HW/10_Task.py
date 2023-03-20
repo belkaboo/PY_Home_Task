@@ -13,12 +13,11 @@ for i in range(n):
         a += 1
     else:
         b += 1
-        
+              
 print(coins_list)
 
 if a < b:
-    print(a)
+    print(f'Нужно перевернуть -  {a}')
 else:
-    print(b)
-
+    print(f'Нужно перевернуть -  {b}')
 
