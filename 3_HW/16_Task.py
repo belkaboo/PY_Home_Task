@@ -8,3 +8,13 @@
 #     1 2 3 4 5
 #     3
 #     -> 1
+
+num = int(input('Введите кол-во элементов: '))
+
+list_nums = []
+for i in range(num):
+    list_nums.append(int(input(f'Введите {i+1} элемент: ')))
+
+x = int(input('Введите число для поиска: '))
+    
+print('Число {} встречается {} раз(а)' .format(x, list_nums.count(x)))
