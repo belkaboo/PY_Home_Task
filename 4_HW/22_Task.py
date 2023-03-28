@@ -3,3 +3,13 @@
 # Пользователь вводит 2 числа. n - кол-во элементов первого множества. 
 # m - кол-во элементов второго множества. Затем пользователь вводит сами элементы множеств.
 
+from random import randint
+
+n = int(input('Введите число N: '))
+m = int(input('введите число M: '))
+
+list_1 = [randint(0,50) for i in range(n)]
+list_2 = [randint(0,50) for i in range(m)]
+
+result = set(list_1 + list_2)
+print(sorted(result))
