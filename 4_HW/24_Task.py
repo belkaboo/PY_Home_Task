@@ -9,3 +9,16 @@
 # Напишите программу для нахождения максимального числа ягод, 
 # которое может собрать за один заход собирающий модуль, находясь перед некоторым кустом заданной во входном файле грядки.
 
+from random import randint
+
+n = int(input('Введите кол-во кустов: '))
+shrub_list= [randint(1,20) for i in range(n)]
+print(shrub_list)
+harvest_list = []
+
+for i in range(len(shrub_list) - 1):
+    harvest_list.append(shrub_list[i - 1] + shrub_list[i] + shrub_list[i + 1])
+harvest_list.append(shrub_list[-2] + shrub_list[len(shrub_list) - 1] + shrub_list[0]) 
+
+print(harvest_list)
+print(max(harvest_list))
