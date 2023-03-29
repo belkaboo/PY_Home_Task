@@ -4,3 +4,15 @@
 
 # A = 3; B = 5 -> 243 (3⁵)
 #     A = 2; B = 3 -> 8 
+
+a = int(input('Введите число: '))
+b = int(input('В какую степень возвести это число? '))
+
+
+def pow_number (num, pow):
+    if pow == 1:
+        return (num)
+    if pow != 1:
+        return (num * pow_number(num, pow - 1))
+
+print(f'Результат - {pow_number(a,b)}')
