@@ -9,10 +9,10 @@ a = int(input('Введите число: '))
 b = int(input('В какую степень возвести это число? '))
 
 
-def pow_number (num, pow):
-    if pow == 1:
+def pow_number (num, pow): # Переделать для отрицательных степеней.
+    if pow < 2: 
         return (num)
-    if pow != 1:
+    else: 
         return (num * pow_number(num, pow - 1))
 
 print(f'Результат - {pow_number(a,b)}')
