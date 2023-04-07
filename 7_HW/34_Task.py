@@ -11,3 +11,13 @@
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да    
 #     **Вывод:** Парам пам-пам 
 
+vowels_dict = 'аоуэыяеёюи'
+vinnie_song = input().split()
+result = [sum([True for j in word if j.lower() in vowels_dict]) for word in vinnie_song]
+
+#print(result)
+
+if all(result) and len(set(result)) == 1:
+    print("Парам пам-пам")
+else:
+    print("Пам парам")
